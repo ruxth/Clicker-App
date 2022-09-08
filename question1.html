@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Quizem - Question 1</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./fade-in-text.css">
+  <link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet'>
+
+</head>
+<body>
+  <h1>
+    <img src="quizemqs.png" style="width:400px;height:117px;">
+  </h1>
+
+  <div class="bg"></div>
+  <div class="bg bg2"></div>
+  <div class="bg bg3"></div>
+  <center>
+    <div class="fade-in-text" style="background-color:rgba(255,255,255,.5); border-radius: 25px; width: 800px; display: inline-block; ">
+    <p>What is the name of the Prof in charge of Android Programming?</p>
+    </div>
+  </center>
+
+  <center>
+    <table class="fade-in-text" style= "margin-top: 80px; width: 100%;">
+    <tr>
+      <td style = "text-align: center;width: 50%;"><button class="editbtn" style="color:white ;background-color:rgba(255,0,0,.8); font-size: 30px;width: 90%; height:100px; border-radius: 20px; word-wrap: break-word; font-family: 'Karla'; ">A. Prof Chua Hock Chuan</button></td>
+      <td style = "text-align: center;width: 50%;"><button class="editbtn" style="color:black; background-color:rgba(0,255,0,.8);font-size: 30px;width: 90%; height:100px; border-radius: 20px; word-wrap: break-word; font-family: 'Karla';">B. Prof Foo Say Wei</button></td></tr>
+      <tr> <td style = "height:20px"></td>
+      </tr>
+    <tr>
+      <td style = "text-align: center;width: 50%;"><button class="editbtn" style="color:white; background-color:rgba(0,0,255,.8);font-size: 30px;width: 90%; height:100px; border-radius: 20px; word-wrap: break-word; font-family: 'Karla';">C. Prof Muhammad Faeyz Karim</button></td>
+      <td style = "text-align: center;width: 50%;"><button class="editbtn" style="color:black; background-color:rgba(255,255,0,.8);font-size: 30px;width: 90%; height:100px; border-radius: 20px; word-wrap: break-word; font-family: 'Karla';">D. Prof Chan Chee Keong</button></td></tr>
+  </table>
+  </center>
+  <center>
+  <table class="fade-in-text" style= "margin-top: 80px; height: 100px;">
+    <tr>
+      <td style = "font-family: 'Karla';font-size: 30px;">Timer</td>
+      <td style = "width:20px"></td>
+      <td style = "margin-right: 80px;text-align: center; font-size: 30px; background-color:rgba(255,255,255,.5); width: 100px; height:100px;border-radius: 50px;display: inline-block;font-family: 'Karla';">
+      <p id="countdown"></p>
+      </td>
+      <td style = "margin-left: 80px;">
+        <form method='get' action='/clicker/display1'>
+        <input type="submit" value="See Results" style="height:50px; width:100px; font-family: 'Karla'; font-size: 25px; background-color:rgba(255,255,255,.5); border-radius: 25px; width: 800px; height:100px; display: inline-block;" >
+      </td>
+      <script>
+var timeleft = 30;
+var downloadTimer = setInterval(function(){
+  if(timeleft <= 0){
+    clearInterval(downloadTimer);
+    document.getElementById("countdown").innerHTML = "0";
+  } else {
+    document.getElementById("countdown").innerHTML = timeleft;
+  }
+  timeleft -= 1;
+}, 1000);
+</script>
+    </tr>
+  </table>
+  </center>
+  
+    
+</body>
+
+</html>
